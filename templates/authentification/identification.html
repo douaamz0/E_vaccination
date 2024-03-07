@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<form id="identification" method="POST" class="border-class">
+  {% csrf_token %}
+ 
+  {% if messages %}
+  <ul class="errorlist">
+    {% for message in messages %}
+    <div class="alert alert-danger" role="alert" data-mdb-color="danger">
+      {{ message }}
+      </div>
+    {% endfor %}
+  </ul>
+{% endif %}
+    <div class="mb-3">
+      <label  class="form-label">Email</label>
+      <input type="email" class="form-control" name="email"/>
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Mot de passe</label>
+      <input type="password" class="form-control" name="password"/>
+    </div>
+    <div>
+      <a class="lien" href="{% url 'Authentification:inscription' %}">créer un compte</a>
+    </div>
+    
+    <button id="btnsub" type="submit" class="btn btn-primary">Connexion</button>
+
+</form>
+
+{% endblock content %}

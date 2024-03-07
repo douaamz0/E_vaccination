@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Importance et mode d'action
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            La vaccination permet de sauver des millions de vies. Son mode d’action consiste à stimuler et à préparer le système immunitaire à reconnaître et à lutter contre les virus qu’ils ciblent. Ainsi, face à une exposition ultérieure au même agent pathogène, l’organisme est prêt à le détruire, ce qui permet de prévenir la maladie. Etant une intervention de santé publique par excellence, la vaccination a démontré sa pertinence dans la réduction des décès et de Handicaps engendrés par plusieurs maladies infectieuses telles la diphtérie, le tétanos, la poliomyélite, la coqueluche, la rougeole... La vaccination contre le virus de la COVID-19 représente une opportunité pour assurer une protection individuelle et collective/communautaire. Ce vaccin provoque une protection spécifique contre le virus SARS-CoV2, responsable de la COVID-19 en permettant, au système immunitaire, de mémoriser le premier contact avec l’antigène utilisé. Au contact ultérieur avec le virus, la rapidité de la reconnaissance et l’intensité de la réponse immune spécifique permettront d’éviter l’infection ou ses complications. Se faire vacciner est un moyen de se protéger et également de protéger son entourage. Cependant, l’immunité collective ne serait possible que si la majorité des personnes se sont vaccinées un minimum de 80 % de la population sur le territoire national).
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Sécurité/efficacité
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            La sécurité, l’efficacité des vaccins adoptés au Maroc pour la campagne de vaccination contre le virus de la COVID-19 ont été confirmées à travers des constats positifs et des essais cliniques menés au Maroc et dans d’autres pays. A cet effet, un comité scientifique de haut niveau assure le suivi de ce processus.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Population cible
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            La campagne de vaccination contre le virus de la COVID-19 cible les citoyens âgés de plus de 17 ans, selon un schéma vaccinal en deux injections. Cette population cible est estimée à 25 000 000. La priorité sera accordée à certaines cibles en particulier les personnels de première ligne, en l’occurrence, les professionnels de Santé, les autorités publiques, les forces de sécurité et le personnel de l’éducation nationale, ainsi qu’aux personnes âgées et aux personnes vulnérables au virus, et ce, avant de l’élargir au reste de la population.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Dispositif
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            La stratégie Nationale de vaccination contre le virus de la COVID-19 a prévu une campagne massive de vaccination qui sera effectuée sur l’ensemble du territoire National. Pour la réussite de cette opération, la majorité des professionnels de santé est mobilisée et 2880 Etablissements de Soins de Santé Primaires ont été désignés, ainsi qu’un nombre important de stations vaccinales qui y seront rattachées pour développer les activités de vaccination selon deux modes : Mode fixe : La population se déplace vers la station vaccinale. Mode mobile : Déplacement des équipes de vaccination rattachées à la station, vers des points mobiles de vaccination selon un programme préétabli dont le nombre est arrêté lors de la planification locale en 7000 points. Le nombre de doses nécessaires est de deux : Pour le vaccin du laboratoire « Sinopharm » : l’intervalle minimal entre les deux injections est de 21 jours. Pour le vaccin du laboratoire « Astrazenica » : l’intervalle minimal entre les deux injections est de 28 jours.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Effets indésirables
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Pour les vaccins choisis par le Maroc et comme pour tout vaccin, de rares effets indésirables, bénins à modérés (douleurs au site d‘injection, réaction cutanée, maux de tête, une légère fébricule), ont été notifiés chez quelques personnes parmi les participants aux essais cliniques au Maroc. Les résultats intermédiaires de ces derniers ont confirmé que ces effets indésirables étaient transitoires, comparables à d’autres vaccins de même type et qu’aucun événement indésirable grave n'a été signalé.
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+{% endblock content %}

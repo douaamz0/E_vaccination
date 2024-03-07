@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<form id="inscription" method="POST" action="{% url 'Authentification:inscription' %}" class="row g-3 needs-validation" novalidate>
+  {% csrf_token %}
+  <div class="col-md-4">
+    <label for="{{ form.nom.id_for_label }}" class="form-label">Nom</label>
+    <input type="text" class="form-control" name="nom"/>
+  </div>
+  <div class="col-md-4">
+    <label for="{{ form.prenom.id_for_label }}" class="form-label">Prenom</label>
+    <input type="text" class="form-control" name="prenom"/>
+  </div>
+  <div class="col-md-4">
+    <label for="{{ form.email.id_for_label }}" class="form-label">Email</label>
+    <input type="text" class="form-control" name="email"/>
+  </div>
+  <div class="col-md-12">
+    <label for="{{ form.mot_de_passe.id_for_label }}" class="form-label">Mot de passe</label>
+    <input type="password" class="form-control" name="password1"/>
+  </div>
+  <div class="col-md-12">
+    <label for="{{ form.mot_de_passe.id_for_label }}" class="form-label">resaisir le mot de passe</label>
+    <input type="password" class="form-control" name="password2"/> 
+  </div>
+  
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">S'inscrire</button>
+  </div>
+  {% if error %}
+  <div class="alert alert-danger" role="alert" data-mdb-color="danger">
+    {{message}}
+  </div>
+  {% endif %}
+</form>
+
+{% endblock content %}

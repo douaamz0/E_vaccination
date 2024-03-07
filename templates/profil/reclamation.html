@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<form class="reclamation" method="POST" action="{% url 'Profil:reclamation' %}">
+    {% csrf_token %}
+    
+    
+    <div class="mb-4">
+      <label class="form-label " for="{{ form.nomRec.id_for_label }}">titre</label>
+      {{ form.nom }}
+    </div>
+    
+    
+    <div class="mb-4">
+      <label class="form-label " for="{{ form.date_reclamation.id_for_label }}">Date de réclamation :</label>
+      {{ form.date_reclamation }}
+    </div>
+    
+    
+    <div class="mb-4">
+      <label class="form-label " for="{{ form.description.id_for_label }}">Description :</label>
+      {{ form.description }}
+    </div>
+    
+    
+    <div class="mb-4">
+      <label class="form-label " for="{{ form.symptomes.id_for_label }}">Symptômes :</label>
+      {{ form.symptomes }}
+    </div>
+    
+    
+    <div class="mb-4">
+      <label class="form-label " for="{{ form.date_effets_secondaires.id_for_label }}">Date des effets secondaires :</label>
+      {{ form.date_effets_secondaires }}
+    </div>
+    
+    
+    <div class="mb-4">
+      <button id="btnsub" type="submit" class="btn btn-primary">Envoyer</button>
+  </div>
+  </form>
+{% endblock content %}  

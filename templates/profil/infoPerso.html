@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<form id="infopers" method="POST"  action="{% url 'Profil:infopers' %}">
+    {% csrf_token %}
+    <div class="mb-4">
+        {% if form.date_naissance.errors %}
+      <div class="alert alert-danger" role="alert" data-mdb-color="danger">
+        {{ form.date_naissance.errors }}
+      </div>  
+      {% endif %}
+        
+       <div class="form-group {% if form.date_naissance.errors %}has-error{% endif %}">
+          <label for="{{ form.date_naissance.id_for_label }}">Date de naissance :</label>
+              {{ form.date_naissance }}
+       
+  </div>
+    </div>
+    <div class="mb-4">
+        <label class="form-label" for="{{ form.nom.id_for_label }}">Adresse</label>
+        {{ form.adresse}}
+    </div>
+    <div class="mb-4">
+        <label class="form-label" for="{{ form.nom.id_for_label }}">Telephone</label>
+         {{ form.telephone}}
+    </div>
+    <div class="mb-4">
+        <label class="form-label" for="{{ form.nom.id_for_label }}">CIN</label>
+         {{ form.cin}}
+    </div>
+    
+    <div class="mb-4">
+        <button id="btnsub" type="submit" class="btn btn-primary">Soumettre</button>
+    </div>
+    
+</form>
+{% endblock content %}

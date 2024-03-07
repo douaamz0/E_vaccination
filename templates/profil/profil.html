@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    {% if show_remplir_info %}
+    <h4 class="alrt">Veuillez avant tout remplir les informations demandées dans le formulaire afin de finaliser votre inscription</h4>
+        <div class="btnremplirInfo">
+            <a href="{% url 'Profil:infopers' %}" class="btn btn-primary">
+                Remplir mes informations
+            </a>
+        </div>
+    {% endif %}
+<div class="nometprenom">
+    <h1 class="nom">Nom: {{ nom }}</h1>
+    <h1 class="prenom">Prénom: {{ prenom }}</h1>
+</div>
+    
+
+    <div class="row" id="cards">
+        <div class="col-sm-4">
+            <div class="card" style="width: 12rem;">
+                <img src="{% static 'images/profil/reclam.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="{% url 'Profil:telecharger_passe_vaccinal' %}" class="btn btn-primary">
+                        Télécharger Passe Vaccinal
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card" style="width: 12rem;">
+                <img src="{% static 'images/profil/document.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="{% url 'Profil:reclamation' %}" class="btn btn-primary">
+                        Faire une réclamation
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card" style="width: 12rem;">
+                <img src="{% static 'images/profil/document-texte.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="{% url 'Profil:afficherReclamation' %}" class="btn btn-primary">
+                        Voir mes réclamations
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="btndeco">
+        <a href="{% url 'Authentification:logout' %}" class="btn btn-danger">
+            <i class="fa fa-sign-out"></i> Déconnexion
+        </a>
+    </div>
+    
+    
+{% endblock content %}

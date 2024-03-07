@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1 class="titrereclam">Mes réclamations</h1>
+    <ul>
+        {% for reclamation in reclamations %}
+            <li>{{ reclamation }}</li>
+        {% empty %}
+            <li>Aucune réclamation trouvée.</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

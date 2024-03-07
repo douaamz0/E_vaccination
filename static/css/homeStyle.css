@@ -1,0 +1,77 @@
+#img2{
+    position:relative;
+    top:50px;
+    border-radius: 40;
+
+}
+.vax{
+    position:relative;
+    top: 50px;
+    font-size:100px;
+    color: rgb(65, 118, 65);
+}
+.title{
+    position:relative;
+    top:50px;
+    color:rgb(8, 8, 129);
+    text-decoration-line: underline;
+    text-decoration-color: red;
+
+}
+.operationvax{
+    position:relative;
+    top:100px;
+    margin: 50px;
+    color:rgb(8, 8, 129);
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    
+}
+
+
+.lieudevax{
+    position:relative;
+    top: 100px;
+    color: rgb(65, 118, 65);
+}
+.aspect{
+    position:relative;
+    top: 100px;
+    color: rgb(65, 118, 65);
+}
+#lieuvax{
+    position:relative;
+    top: 100px;
+}
+#aspectimg{
+    position:relative;
+    top: 100px;
+}
+.video{
+    position:relative;
+    top:100px;
+    margin: 50px;
+    color:rgb(8, 8, 129);
+    text-decoration-line: underline;
+    text-decoration-color: red;
+}
+.video1{
+    position:relative;
+    top:100px;
+    
+}
+.video2{
+    position:relative;
+    top:100px;
+    padding-left:50px;
+    
+}
+footer{
+    position:relative;
+    top:200px;
+}
+#foot{
+    color:red;
+    font-style: bold;
+}
+

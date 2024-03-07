@@ -1,0 +1,9 @@
+#infopers{
+    position:relative;
+    left:0px ;
+    top:50px;
+    padding:20px ;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(8, 8, 129);
+}

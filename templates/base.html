@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{% static 'css/homeStyle.css' %}"> 
+    <link rel="stylesheet"  href="{% static 'css/informations.css' %}"> 
+    <link rel="stylesheet"  href="{% static 'css/mapLocalisation.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/authentification.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/infoper.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/profil.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/reclamation.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/accueil/logo.png' %}">
+    <title>VaxEase</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'Authentification:Accueil' %}"></a>
+      <img src="{% static 'images/accueil/logo.png' %}" alt="" width="60" height="50">
+    </a>
+      <a class="navbar-brand" style="color: rgb(65, 118, 65);font-size: 30px; font-weight: bold;" href="{% url 'Authentification:Accueil' %}">VaxEase</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-weight: bold; font-size:20px">
+          <li class="nav-item">
+            <a class="nav-link active" id="accueil" style="color: rgb(8, 8, 129);" aria-current="page" href="{% url 'Authentification:Accueil' %}">Accueil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link " id="information" style="color: rgb(8, 8, 129);" href="{% url 'Informations' %}" role="button"  aria-expanded="false">
+              Informations sur le vaccin
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="compte" style="color: rgb(8, 8, 129);" href="{% url 'map' %}">Map de localisation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="compte" style="color: rgb(8, 8, 129);" href="{% url 'Authentification:identification' %}">Mon Profil</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-success" ><a href="{% url 'Authentification:identification' %} " style="text-decoration: none; font-weight: bold; color:rgb(8, 8, 129)">S'identifier</a></button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+          
+     
+<body>
+  {% block content %} {% endblock %}
+  <script src="{% static 'js/souligner.js' %}"></script>
+  
+ 
+</body>
+<footer>
+  <div class="card text-center">
+    
+    <div class="card-body">
+      <h5  id="foot" class="card-title">Me protéger, protéger mon pays! </h5>
+      <a href="https://www.sante.gov.ma/Pages/Accueil.aspx" class="btn btn-primary">Ministère de la santé</a>
+    </div>
+    
+  </div>
+</footer>
+</html>
